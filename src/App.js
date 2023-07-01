@@ -5,7 +5,7 @@ import {Banner} from './component/banner'
 import {Skill} from './component/skills'
 import {Project} from './component/project'
 import {Contact} from './component/Contact'
-import {Footer, footer} from './component/Footer'
+import {Footer} from './component/Footer'
 
 
 function App() {  
