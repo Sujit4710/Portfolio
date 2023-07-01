@@ -1,0 +1,113 @@
+@font-face {
+    font-family: Centra;
+    src: url('../assets/font/CentraNo2-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Centra;
+    src: url('../assets/font/CentraNo2-Book.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Centra;
+    src: url('../assets/font/CentraNo2-Medium.ttf');
+    font-weight: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Centra', sans-serif;
+    background: #f2f2f2;
+}
+
+@keyframes slide {
+    from{
+        transform: translate(100%);
+    }
+    to{
+        transform: translate(-220%);
+    }
+}
+
+@media screen and (max-width:500px) {
+	@keyframes slide {
+		from {
+			transform: translate(100%);
+		}
+		to {
+			transform: translate(-1000%);
+		}
+	}
+    .slider{
+        animation: 40s slide infinite linear;
+    }
+}
+
+.logos {
+    overflow: hidden;
+    background: #f2f2f2;
+    padding: 60px 0;
+    position: relative;
+}
+.logos::before,
+.logos::after{
+    position:absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos::before{
+    left: 0;
+    background: linear-gradient(to left, rgba(244, 240, 240, 0), white);
+}
+
+.logos::after{
+    right: 0;
+    background: linear-gradient(to right, rgba(244, 240, 240, 0), white);
+
+}
+
+.slider:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.tagline1 {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin: 0 0 0 40%;
+    padding: 8px 40px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    font-size: 45px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+.tagline1:hover{
+    cursor:pointer;
+}
+
+.slider {
+    padding: 15px;
+    background: #f2f2f2;
+    white-space: nowrap;
+    animation: 30s slide infinite linear;
+}
+
+.slider img {
+    height: 150px;
+    width: 150px;
+    margin: 0 40px;
+}
